@@ -54,7 +54,7 @@ class LBC(Layer):
         self.LBC.kernel = anchor_weights
         #self.LBC._non_trainable_weights.append(anchor_weights)
         #self.trainable = False
-        # super(LBC, self).build(input_shape)  # Be sure to call this at the end
+        super(LBC, self).build(input_shape)  # Be sure to call this at the end
 
     def call(self, x):
         return self.LBC(x)
